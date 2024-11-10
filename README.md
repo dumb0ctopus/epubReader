@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# Epub Reader Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is an open-source EPUB reader application built with React and [ePub.js](https://github.com/futurepress/epub.js). The goal of this project is to provide a customizable, user-friendly interface to read EPUB books in your web browser. With built-in themes and fonts, it aims to make the reading experience as pleasant as possible.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Customizable Fonts**: Select from a variety of Google Fonts including Georgia, Merriweather, Roboto, and Libre Baskerville to personalize your reading experience.
+- **Themes**: Switch between three themes (Light, Sepia, and Dark) to adapt the reading environment to your comfort.
+- **Table of Contents (TOC)**: A convenient TOC for easy navigation between book chapters.
+- **Paginated Navigation**: Navigate through the book pages using the next and previous buttons.
+- **Responsive Design**: The application is fully responsive and works seamlessly on different devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Make sure you have the following tools installed on your development machine:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/en/) (version 12 or later)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Clone the repository**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/yourusername/epub-reader-app.git
+   cd epub-reader-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**
 
-### `npm run eject`
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the development server**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   The application will be running at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+- **EPUB Viewer**: Drag and drop an EPUB file or provide it via a URL to load it into the viewer.
+- **Themes and Fonts**: Use the controls at the top of the screen to change the theme or font. The changes will be reflected instantly in the viewer.
+- **Navigation**: Use the Table of Contents to jump to specific chapters, or navigate using the previous and next buttons.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `EpubReader`
 
-### Code Splitting
+The core component that handles displaying the EPUB content.
+- **Props**:
+  - `epubData`: EPUB file data to be loaded.
+  - `initialLocation`: The starting point within the book.
+  - `onLocationChange`: Callback when the reading location changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### `TOCOverlay`
 
-### Analyzing the Bundle Size
+This component renders the Table of Contents (TOC) overlay, which allows users to navigate to different chapters.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Customization
 
-### Making a Progressive Web App
+- **Adding Fonts**: The fonts available for users can be customized in the `handleFontChange` function within `EpubReader.js`. Additional Google Fonts can be imported in `EpubReader.css`.
+- **Adding Themes**: You can add more themes by registering them in the `rendition.themes.register` method.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are welcome! If you have any ideas to improve the project or find a bug, feel free to open an issue or submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Steps to Contribute
 
-### Deployment
+1. **Fork the repository**
+2. **Create a new branch** (`git checkout -b feature-branch`)
+3. **Commit your changes** (`git commit -m 'Add some feature'`)
+4. **Push to the branch** (`git push origin feature-branch`)
+5. **Open a Pull Request**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgments
+
+- **[ePub.js](https://github.com/futurepress/epub.js)**: A fantastic library for reading EPUB files in JavaScript.
+- **Google Fonts**: For providing an excellent collection of fonts to improve the reading experience.
+
+## Contact
+
+For questions or suggestions, please reach out by opening an issue on the GitHub repository.
+
+---
+
+Happy Reading! 📚
+

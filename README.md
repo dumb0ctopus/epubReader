@@ -26,7 +26,7 @@ Make sure you have the following tools installed on your development machine:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/epub-reader-app.git
+   git clone https://github.com/dumb0ctopus/epubReader.git
    cd epub-reader-app
    ```
 
@@ -46,11 +46,11 @@ Make sure you have the following tools installed on your development machine:
    yarn start
    ```
 
-   The application will be running at `http://localhost:3000`.
+   You can run the application on `http://localhost:3000`.
 
 ## Usage
 
-- **EPUB Viewer**: Drag and drop an EPUB file or provide it via a URL to load it into the viewer.
+- **EPUB Viewer**: Load the file into the viewer.
 - **Themes and Fonts**: Use the controls at the top of the screen to change the theme or font. The changes will be reflected instantly in the viewer.
 - **Navigation**: Use the Table of Contents to jump to specific chapters, or navigate using the previous and next buttons.
 
